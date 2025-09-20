@@ -1,0 +1,44 @@
+/* Prevent page breaks inside headings + their content */
+h1, h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+
+p, ul, ol, table, pre, blockquote {
+  page-break-inside: avoid;
+}
+
+/* Keep code blocks and images together */
+pre, code, img {
+  page-break-inside: avoid;
+  page-break-before: auto;
+  page-break-after: auto;
+}
+
+/* Improve spacing for print readability */
+body {
+  line-height: 1.6;
+  font-size: 12pt;
+  font-family: "Times New Roman", serif;
+}
+
+/* Optional: Add margin to pages */
+@page {
+  margin: 20mm;
+}
+
+/* Avoid breaking lists */
+ul, ol {
+  page-break-inside: avoid;
+}
+
+/* Better table handling */
+table {
+  page-break-inside: avoid;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444;
+  padding: 6px;
+}
